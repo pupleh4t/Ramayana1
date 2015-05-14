@@ -12,7 +12,6 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.PopupWindow;
@@ -31,27 +30,26 @@ public class MainActivity extends Activity {
 	double jumlahPesanSendal=0;
 	Button btnClose25;
 	public PopupWindow pwindo;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_main);
-		
-		 MyPagerAdapter adapter = new MyPagerAdapter();
-         ViewPager myPager = (ViewPager) findViewById(R.id.menuJualan);
-         myPager.setOffscreenPageLimit(4);
-         myPager.setAdapter(adapter);
-         myPager.setCurrentItem(0);
+
+		MyPagerAdapter adapter = new MyPagerAdapter();
+		ViewPager myPager = (ViewPager) findViewById(R.id.menuJualan);
+		myPager.setOffscreenPageLimit(4);
+		myPager.setAdapter(adapter);
+		myPager.setCurrentItem(0);
 	}
-	
+
 	public void totalHarga(View v){
 		try {
 			hargaTotalBaju();
 			hargaTotalCelana();
 			hargaTotalSendal();
-			double jumlahTotal = (double)jumlahPesanBaju+(double)jumlahPesanCelana+(double)jumlahPesanCelana;
+			double jumlahTotal = (double)jumlahPesanBaju+(double)jumlahPesanCelana+(double)jumlahPesanSendal;
 			TextView txtTotal = (TextView)findViewById(R.id.txtHarga);
 			if (jumlahTotal<=1000000){
 				txtTotal.setText("Total Harga : "+String.valueOf(jumlahTotal));
@@ -65,7 +63,7 @@ public class MainActivity extends Activity {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void lihatDetail (View v){
 		initiatePopupWindowBaju();
 	}
@@ -80,7 +78,7 @@ public class MainActivity extends Activity {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void lihatDetailCelana (View v){
 		initiatePopupWindowCelana();
 	}
@@ -95,7 +93,7 @@ public class MainActivity extends Activity {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void lihatDetailSendal (View v){
 		initiatePopupWindowSendal();
 	}
@@ -114,16 +112,16 @@ public class MainActivity extends Activity {
 	public void close25 (View v){
 		pwindo.dismiss();
 	}
-	
+
 	public double hargaTotalBaju(){
 		double num_pesan = 0;
 		double num_harga = 0;
 		jumlahPesanBaju = 0;
 		for (int a=0; a<jumlahBaju.length;a++){
-			
+
 			EditText getJumlah = (EditText)findViewById(jumlahBaju[a]);
 			TextView getHarga = (TextView)findViewById(hargaBaju[a]);
-			
+
 			String hasil = getJumlah.getText().toString();
 			String harga = getHarga.getText().toString();
 			if (hasil != ""){
@@ -133,44 +131,44 @@ public class MainActivity extends Activity {
 			} else if (hasil == ""){
 				num_pesan = 0;
 				jumlahPesanBaju = jumlahPesanBaju+(num_harga * num_pesan * 0.75);
-			}		
+			}
 		}
 		return jumlahPesanBaju;
 	}
-	
+
 	public double hargaTotalSendal(){
 		int num_pesan = 0;
 		int num_harga = 0;
 		jumlahPesanSendal = 0;
-		for (int a=0; a<jumlahBaju.length;a++){
-			
-			EditText getJumlah = (EditText)findViewById(jumlahBaju[a]);
-			TextView getHarga = (TextView)findViewById(hargaBaju[a]);
-			
+		for (int a=0; a<jumlahSendal.length;a++){
+
+			EditText getJumlah = (EditText)findViewById(jumlahSendal[a]);
+			TextView getHarga = (TextView)findViewById(hargaSendal[a]);
+
 			String hasil = getJumlah.getText().toString();
 			String harga = getHarga.getText().toString();
 			if (hasil != ""){
 				num_pesan = Integer.valueOf(hasil);
 				num_harga = Integer.valueOf(harga);
-				
-				jumlahPesanSendal = jumlahPesanSendal+(num_harga * num_pesan * 0.60);
+
+				jumlahPesanSendal = jumlahPesanSendal+(num_harga * num_pesan * 0.6);
 			} else if (hasil == ""){
 				num_pesan = 0;
-				jumlahPesanSendal = jumlahPesanSendal+(num_harga * num_pesan * 0.60);
-			}		
+				jumlahPesanSendal = jumlahPesanSendal+(num_harga * num_pesan * 0.6);
+			}
 		}
 		return jumlahPesanSendal;
 	}
-	
+
 	public double hargaTotalCelana(){
 		int num_pesan = 0;
 		int num_harga = 0;
 		jumlahPesanCelana = 0;
 		for (int a=0; a<jumlahCelana.length;a++){
-			
+
 			EditText getJumlah = (EditText)findViewById(jumlahCelana[a]);
 			TextView getHarga = (TextView)findViewById(hargaCelana[a]);
-			
+
 			String hasil = getJumlah.getText().toString();
 			String harga = getHarga.getText().toString();
 			if (hasil != ""){
@@ -180,74 +178,74 @@ public class MainActivity extends Activity {
 			} else if (hasil == ""){
 				num_pesan = 0;
 				jumlahPesanCelana = jumlahPesanCelana+(num_harga * num_pesan *0.5);
-			}		
+			}
 		}
 		return jumlahPesanCelana;
 	}
-	
+
 	private class MyPagerAdapter extends PagerAdapter {
 
-        public int getCount() {
-                return 4;
-        }
+		public int getCount() {
+			return 4;
+		}
 
-        public Object instantiateItem(View collection, int position) {
+		public Object instantiateItem(View collection, int position) {
 
-                LayoutInflater inflater = (LayoutInflater) collection.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			LayoutInflater inflater = (LayoutInflater) collection.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-                int resId = 0;
-                switch (position) {
-                case 0:
-                    	resId = R.layout.menu_total;
-                    	break;
-                case 1:
-                        resId = R.layout.menu_baju;
-                        break;
-                case 2:
-                        resId = R.layout.menu_celana;
-                        break;
-                case 3:
-                        resId = R.layout.menu_sendal;
-                        break;
-                }
+			int resId = 0;
+			switch (position) {
+				case 0:
+					resId = R.layout.menu_total;
+					break;
+				case 1:
+					resId = R.layout.menu_baju;
+					break;
+				case 2:
+					resId = R.layout.menu_celana;
+					break;
+				case 3:
+					resId = R.layout.menu_sendal;
+					break;
+			}
 
-                View view = inflater.inflate(resId, null);
+			View view = inflater.inflate(resId, null);
 
-                ((ViewPager) collection).addView(view, 0);
+			((ViewPager) collection).addView(view, 0);
 
-                return view;
-        }
+			return view;
+		}
 
-        public void destroyItem(View arg0, int arg1, Object arg2) {
-                ((ViewPager) arg0).removeView((View) arg2);
+		public void destroyItem(View arg0, int arg1, Object arg2) {
+			((ViewPager) arg0).removeView((View) arg2);
 
-        }
+		}
 
-        public void finishUpdate(View arg0) {
-                // TODO Auto-generated method stub
+		public void finishUpdate(View arg0) {
+			// TODO Auto-generated method stub
 
-        }
+		}
 
-        public boolean isViewFromObject(View arg0, Object arg1) {
-                return arg0 == ((View) arg1);
+		public boolean isViewFromObject(View arg0, Object arg1) {
+			return arg0 == ((View) arg1);
 
-        }
+		}
 
-        public void restoreState(Parcelable arg0, ClassLoader arg1) {
-                // TODO Auto-generated method stub
+		public void restoreState(Parcelable arg0, ClassLoader arg1) {
+			// TODO Auto-generated method stub
 
-        }
+		}
 
-        public Parcelable saveState() {
-                // TODO Auto-generated method stub
-                return null;
-        }
+		public Parcelable saveState() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 
-        public void startUpdate(View arg0) {
-                // TODO Auto-generated method stub
+		public void startUpdate(View arg0) {
+			// TODO Auto-generated method stub
 
-        }
-    }
+		}
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
