@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <FrameLayout 
+        android:id="@+id/headerSendal"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:background="@null">
+        
+        <ImageView 
+            android:background="@color/header"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:contentDescription="@null"/>
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="16sp"
+            android:text="@string/judul_sendal"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="#fff"/>
+    </FrameLayout>
+    
+    <ScrollView 
+        android:id="@+id/menuSendal"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/headerSendal">
+        
+        <LinearLayout 
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal1"/>
+                
+                <TextView
+                    android:id="@+id/harSendal1" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga300000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal2"/>
+                
+                <TextView
+                    android:id="@+id/harSendal2"  
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga300000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal3"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal3" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga200000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal4"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal4" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga300000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal5"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal5" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga200000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal6"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal6" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga150000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal7"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal7" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga150000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal8"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal8" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga200000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal9"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal9" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga50000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal10"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal10" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga150000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal11"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal11" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga50000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal12"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal12" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga150000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal13"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal13" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga50000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal14"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal14" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga50000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailSendal">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/sendal15"/>
+                
+                <TextView 
+                    android:id="@+id/harSendal15" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga70000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumSendal15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/petunjuk"
+        android:textStyle="bold"
+        android:textColor="@color/header"/>
+
+</RelativeLayout>

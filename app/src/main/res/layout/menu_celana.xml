@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <FrameLayout 
+        android:id="@+id/headerCelana"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:background="@null">
+        
+        <ImageView 
+            android:background="@color/header"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:contentDescription="@null"/>
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="16sp"
+            android:text="@string/judul_celana"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="#fff"/>
+    </FrameLayout>
+    
+    <ScrollView 
+        android:id="@+id/menuCelana"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/headerCelana">
+        
+        <LinearLayout 
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailCelana">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/celana1"/>
+                
+                <TextView
+                    android:id="@+id/harCelana1" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga200000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumCelana1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailCelana">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/celana2"/>
+                
+                <TextView
+                    android:id="@+id/harCelana2"  
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga150000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumCelana2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailCelana">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/celana3"/>
+                
+                <TextView 
+                    android:id="@+id/harCelana3" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga150000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumCelana3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailCelana">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/celana4"/>
+                
+                <TextView 
+                    android:id="@+id/harCelana4" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga200000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumCelana4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailCelana">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/celana5"/>
+                
+                <TextView 
+                    android:id="@+id/harCelana5" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga100000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumCelana5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+            
+          	<RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="lihatDetailCelana">
+                
+                <TextView
+            		android:layout_height="wrap_content"
+            		android:layout_width="wrap_content"
+            		android:layout_alignParentLeft="true"
+            		android:layout_centerVertical="true"
+            		android:text="@string/celana6"/>
+                
+                <TextView 
+                    android:id="@+id/harCelana6" 
+            		android:layout_height="wrap_content"
+            		android:layout_width="80dp"
+            		android:text="@string/harga70000"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:gravity="center_vertical"/>
+                
+                <EditText 
+                    android:id="@+id/jumCelana6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/defaultHarga"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/petunjuk"
+        android:textStyle="bold"
+        android:textColor="@color/header"/>
+    
+   
+
+</RelativeLayout>
